@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
   font-family: 'Cairo', Arial, sans-serif;
@@ -8,6 +9,7 @@ body {
   background: #f2f5f9;
   color: #333;
 }
+
 
 .header {
   background: #1e3a8a;
@@ -21,10 +23,11 @@ body {
   font-weight: bold;
 }
 
+
 .container {
   background: #fff;
   width: 90%;
-  max-width: 450px;
+  max-width: 600px;
   margin: 40px auto;
   padding: 25px;
   border-radius: 10px;
@@ -40,7 +43,9 @@ h1 {
 h2 {
   margin-bottom: 20px;
   font-size: 18px;
+  color: #1e3a8a;
 }
+
 
 input {
   width: 100%;
@@ -56,9 +61,10 @@ input:focus {
   border-color: #1e3a8a;
 }
 
+
 button {
   background: #1e3a8a;
-  color: white;
+  color: #fff;
   border: none;
   padding: 12px;
   width: 100%;
@@ -72,6 +78,7 @@ button:hover {
   background: #162f6a;
 }
 
+
 #msg {
   margin-top: 15px;
   color: red;
@@ -79,28 +86,15 @@ button:hover {
 }
 
 
-table {
+.table-wrapper {
   width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
+  overflow-x: auto;
 }
 
-th, td {
-  border: 1px solid #ddd;
-  padding: 10px;
-}
-
-th {
-  background: #1e3a8a;
-  color: white;
-}
-
-td {
-  background: #f9fafb;
-}
 
 .result-table {
   width: 100%;
+  min-width: 520px;
   border-collapse: collapse;
   margin-top: 15px;
 }
@@ -117,7 +111,12 @@ td {
   color: #fff;
 }
 
-.total-row {
+.result-table td {
+  background: #f9fafb;
+}
+
+
+.total-row td {
   background: #e0f2fe;
   font-weight: bold;
 }
@@ -126,58 +125,6 @@ td {
   background: #f1f5f9;
   font-weight: bold;
   text-align: center;
-}
-
-.percentage {
-  margin-top: 15px;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-@media (max-width: 768px) {
-
-  .result-table,
-  .result-table thead {
-    display: none;
-  }
-
-  .result-table,
-  .result-table tbody,
-  .result-table tr,
-  .result-table td {
-    display: block;
-    width: 100%;
-  }
-
-  .result-table tr {
-    background: #ffffff;
-    margin-bottom: 12px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,.1);
-    padding: 10px;
-  }
-
-  .result-table td {
-    border: none;
-    display: flex;
-    justify-content: space-between;
-    padding: 6px 0;
-    font-size: 15px;
-  }
-
-  .result-table td::before {
-    content: attr(data-label);
-    font-weight: bold;
-    color: #1e3a8a;
-  }
-
-  .section {
-    display: none;
-  }
-
-  .total-row {
-    background: #e0f2fe;
-  }
 }
 
 .percentage-row td {
@@ -189,6 +136,11 @@ td {
 }
 
 
+@media (max-width: 768px) {
+  .result-table {
+    min-width: 500px;
+  }
+}
 
 
 
