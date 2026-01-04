@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تحليل النتيجة</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>📊 تحليل نتيجة الطالب</h2>
+  <h3 id="studentName"></h3>
+
+
+  <div id="gradeBox" class="grade-box"></div>
+
+
+  <div class="progress-container">
+    <div id="progressBar" class="progress-bar"></div>
+  </div>
+  <p id="percentageText"></p>
+
+
+  <table class="result-table">
+    <thead>
+      <tr>
+        <th>المادة</th>
+        <th>النسبة</th>
+        <th>التقييم</th>
+      </tr>
+    </thead>
+    <tbody id="analysisBody"></tbody>
+  </table>
+
+
+  <div id="adviceBox" class="advice-box"></div>
+
+  <button onclick="goBack()">⬅ العودة للنتيجة</button>
+</div>
+
+<script src="analysis.js"></script>
+</body>
+</html>
